@@ -1,0 +1,4 @@
+name: SpawnerPicker
+version: '${project.version}'
+main: online.vivaseikatsu.stra.spawnerpicker.SpawnerPicker
+api-version: 1.18
