@@ -15,6 +15,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.material.MaterialData;
+import org.bukkit.metadata.Metadatable;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.checkerframework.checker.units.qual.C;
 
@@ -106,49 +107,49 @@ public final class SpawnerPicker extends JavaPlugin implements Listener {
             if(s.contains(EntityType.ZOMBIE.toString())){
                 type = EntityType.ZOMBIE;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // SKELETON
             if(s.contains(EntityType.SKELETON.toString())){
                 type = EntityType.SKELETON;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // SPIDER
             if(s.contains(EntityType.SPIDER.toString())){
                 type = EntityType.SPIDER;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // CAVE_SPIDER
             if(s.contains(EntityType.CAVE_SPIDER.toString())){
                 type = EntityType.CAVE_SPIDER;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // SILVERFISH
             if(s.contains(EntityType.SILVERFISH.toString())){
                 type = EntityType.SILVERFISH;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // BLAZE
             if(s.contains(EntityType.BLAZE.toString())){
                 type = EntityType.BLAZE;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // MAGMA_CUBE
             if(s.contains(EntityType.MAGMA_CUBE.toString())){
                 type = EntityType.MAGMA_CUBE;
                 spawner.setSpawnedType(type);
-                return;
+                break;
             }
 
             // それ以外のとき
@@ -157,6 +158,8 @@ public final class SpawnerPicker extends JavaPlugin implements Listener {
 
             // 説明欄の走査ここまで
         }
+
+        spawner.update(true);
 
     }
 
